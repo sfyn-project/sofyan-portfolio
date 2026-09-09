@@ -12,7 +12,7 @@
   --accent: #214e72;
   --max: 1160px;
   --selection: #d9e3e9;
-  --bg-translucent: rgba(244, 241, 233, .84);
+  --bg-translucent: rgba(244, 241, 233, .62);
   --line-translucent: rgba(207, 202, 191, .72);
   --overlay-hover: rgba(235, 231, 220, .58);
   --flow-node-bg: rgba(255, 255, 255, .16);
@@ -30,7 +30,7 @@
   --line: #3a3c34;
   --accent: #8cb7dc;
   --selection: #2c4a66;
-  --bg-translucent: rgba(21, 23, 20, .84);
+  --bg-translucent: rgba(21, 23, 20, .58);
   --line-translucent: rgba(58, 60, 52, .72);
   --overlay-hover: rgba(30, 32, 28, .6);
   --flow-node-bg: rgba(255, 255, 255, .07);
@@ -59,7 +59,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .project-link:hover span { transform: translateX(5px); }
 
 .navbar-shell { position: sticky; top: 0; z-index: 30; border-bottom: 1px solid transparent; transition: background-color .28s ease, border-color .28s ease, backdrop-filter .28s ease; }
-.navbar-shell.is-scrolled { background: var(--bg-translucent); border-color: var(--line-translucent); backdrop-filter: blur(13px); -webkit-backdrop-filter: blur(13px); }
+.navbar-shell.is-scrolled { background: var(--bg-translucent); border-color: var(--line-translucent); backdrop-filter: blur(20px) saturate(1.5); -webkit-backdrop-filter: blur(20px) saturate(1.5); }
 .navbar { min-height: 70px; display: grid; grid-template-columns: 1fr auto auto; align-items: center; gap: 36px; }
 .brand { font-weight: 700; letter-spacing: -.02em; }
 .nav-links, .nav-actions { display: flex; align-items: center; gap: 24px; font-size: .88rem; color: var(--muted); }

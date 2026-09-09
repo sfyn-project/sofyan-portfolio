@@ -114,7 +114,7 @@ export default function Navbar() {
             {site.name}
           </Link>
           <nav className="nav-links" aria-label="Main navigation">
-            <SectionLink {...sectionLinkProps('#work')}>Projectsss</SectionLink>
+            <SectionLink {...sectionLinkProps('#work')}>Projects</SectionLink>
             <SectionLink {...sectionLinkProps('#experience')}>Experience</SectionLink>
             <SectionLink {...sectionLinkProps('#about')}>About</SectionLink>
             <a

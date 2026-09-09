@@ -8,7 +8,7 @@ export const site = {
   whatsappNumber: '0857 4509 7373',
   whatsapp: 'https://wa.me/6285745097373',
   photo: '/Foto_Formal.jpeg',
-  cv: '/Sofyan_Syahri_Huzaini_Backend_Developer_CV.pdf',
+  cv: '/Sofyan_Syahri_Huzaini_Backend_Developer_CV_ATS.pdf',
 }
 
 export const projects = [

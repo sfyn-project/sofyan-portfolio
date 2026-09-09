@@ -52,11 +52,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
 /* Anchor targets must land below the sticky navbar, not underneath it. */
 .work-section, .experience, .about, .footer { scroll-margin-top: 84px; }
 .section-label { font-size: .72rem; color: var(--muted); }
-.text-link { display: inline-flex; align-items: center; min-height: 44px; border-bottom: 1px solid var(--ink); font-size: .92rem; font-weight: 650; }
-.text-link { transition: color .18s ease, border-color .18s ease; }
-.text-link:hover { color: var(--accent); border-color: var(--accent); }
-.project-link span { display: inline-block; margin-left: 5px; transition: transform .2s ease; }
-.project-link:hover span { transform: translateX(5px); }
+.btn { display: inline-flex; align-items: center; min-height: 44px; padding: 0 22px; border-radius: 2px; background: var(--ink); color: var(--bg); font-size: .92rem; font-weight: 650; transition: background-color .18s ease; }
+.btn:hover { background: var(--accent); }
+.btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.btn svg { display: block; flex: none; margin-left: 12px; position: relative; top: 1px; transition: transform .2s ease; }
+.btn:hover svg { transform: translateX(5px); }
 
 /* backdrop-filter declarations live in separate @supports blocks: minifying both into one block drops one of the pair (breaks blur in Firefox in production). */
 .navbar-shell { position: sticky; top: 0; z-index: 30; border-bottom: 1px solid transparent; transition: background-color .28s ease, border-color .28s ease; }

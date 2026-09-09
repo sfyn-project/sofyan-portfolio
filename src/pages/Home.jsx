@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import SectionLabel from '../components/SectionLabel'
 import TechTags from '../components/TechTags'
+import ArrowIcon from '../components/ArrowIcon'
 import useReveal from '../hooks/useReveal'
 import { projects, site } from '../data/site'
 
@@ -29,7 +30,7 @@ export default function Home() {
                 PHP · Laravel · MySQL<br />REST API · System Design
               </div>
             </div>
-            <a className="text-link hero-link hero-enter hero-enter-4" href="#work">Explore my work</a>
+            <a className="btn hero-link hero-enter hero-enter-4" href="#work">Explore my work</a>
           </div>
         </section>
 
@@ -54,7 +55,7 @@ export default function Home() {
                 <div><strong>10K+</strong><span>device / GSM inventory</span></div>
               </div>
               <TechTags items={featured.tech} />
-              <Link className="text-link project-link" to={featured.href}>Read case study <span aria-hidden="true">→</span></Link>
+              <Link className="btn" to={featured.href}>Read case study <ArrowIcon /></Link>
             </article>
 
             {professional.map((project) => (
@@ -69,7 +70,7 @@ export default function Home() {
                 )}
                 <TechTags items={project.tech} />
                 {project.href && (
-                  <Link className="text-link project-link" to={project.href}>Read case study <span aria-hidden="true">→</span></Link>
+                  <Link className="btn" to={project.href}>Read case study <ArrowIcon /></Link>
                 )}
               </article>
             ))}

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { site } from '../data/site'
 import ThemeToggle from './ThemeToggle'
 
@@ -49,6 +49,7 @@ function SectionLink({ hash, onHome, ...rest }) {
 
 export default function Navbar() {
   const location = useLocation()
+  const navigate = useNavigate()
   const onHome = location.pathname === '/'
   const [scrolled, setScrolled] = useState(false)
   const [activeSection, setActiveSection] = useState('')
@@ -101,11 +102,13 @@ export default function Navbar() {
             className="brand"
             to="/"
             onClick={(event) => {
-              // Already on home: the router would be a no-op, so scroll to the
-              // hero manually. From another page, let the Link navigate and
-              // ScrollToTop handles the rest.
+              // Already on home: the Link would be a no-op, so navigate with
+              // replace to strip any hash (e.g. #contact) for a clean "/"
+              // URL and jump to the hero manually. From another page, let the
+              // Link navigate and ScrollToTop handles the rest.
               if (onHome) {
                 event.preventDefault()
+                navigate('/', { replace: true })
                 window.scrollTo({ top: 0, behavior: 'instant' })
                 setActiveSection('')
               }
